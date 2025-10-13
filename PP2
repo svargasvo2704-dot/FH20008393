@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Stack;
+
+public class Revert {
+
+    public static void main(String[] args) {
+        String inputFile = "input.txt";
+        String outputFile = "output.txt";
+
+        Stack<Character> stack = new Stack<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
+            int data;
+
+            while ((data = reader.read()) != -1) {
+                stack.push((char) data);
+            }
+
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
+                while (!stack.isEmpty()) {
+                    writer.write(stack.pop());
+                }
+            }
+
+            System.out.println("✅ El contenido del archivo se ha invertido correctamente en '" + outputFile + "'.");
+
+        } catch (IOException e) {
+            System.out.println("⚠️ Error al leer o escribir el archivo: " + e.getMessage());
+        }
+    }
+}
