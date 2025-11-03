@@ -1,5 +1,4 @@
 // https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayDeque.html
-// ChatGPT (GPT-5)
 
 import java.util.*;
 

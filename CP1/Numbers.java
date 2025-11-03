@@ -1,5 +1,5 @@
 // https://en.wikipedia.org/wiki/Metallic_mean
-// ChatGPT (GPT-5)
+// Copilot
 
 public class Numbers {
 
